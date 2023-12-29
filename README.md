@@ -14,7 +14,9 @@ CLI-based budget tracker
 
 ## Installation
 
-  Will be added once completed
+'''bash
+  git clone https://github.com/Trey722/Budget_Manager.git
+'''
 
 ## Usage
 1. Navigate to the project directory.
