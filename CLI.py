@@ -1,16 +1,9 @@
 import click
 
-
-
-
-
-
-    
-    
-
 @click.command()
 def user_interaction():
-    """Asks the user to sign in or create an account"""
+    """Asks the user to sign
+    in or create an account"""
     click.echo("If you want to quit. Hit control C at any time unless speicifed not to")
     user_choice = click.prompt(
         "Would you like to (1) Sign In or (2) Create an Account? Enter 1 or 2: ",
