@@ -35,16 +35,12 @@ budget manager.
 - To add an expense or income:
 1. Use the guide
     ```bash
-    budget add 
-    ```
-2. Do it yourself 
-    ```bash
-        budget add --type "type" --amount "#" --category "section" --description "" --date "YYYY-MM-DD" "descritipon" --instituion ""
+    --add 
     ```
 
 - to create a budget 
     ```bash
-        create --budget
+        --create budget
     ```
 
 
