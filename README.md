@@ -28,12 +28,11 @@ CLI-based budget tracker
     ```
 3. Log in or sign up using username and password 
 
-budget manager.
-
+budget manager
 ## Sample Commands
 
 - To add an expense or income:
-1. Use the guide
+- Add
     ```bash
     --add 
     ```
@@ -42,13 +41,27 @@ budget manager.
     ```bash
         --create budget
     ```
-
-
-
-
 - To view summary:
     ```bash
-    budget summary
+    --budget summary
     ```
+
+- Get a breakown of your budget by wants needs and income
+```bash
+  --analytics budget
+```
+
+- Get a breakdown of your goal 
+  ```bash
+  -- analytics budget goal
+```
+- see how much you need to make/spend to reach your goal
+
+```bash
+--analytics budget goal - budget
+```
+
+
+
 
 
