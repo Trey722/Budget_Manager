@@ -21,22 +21,29 @@ def get_breakdown_csv(filename):
         '2': 0,
         3: 0
     }
-    with open(filename, 'r') as csvfile:
-        csvreader = csv.reader(csvfile)
-        for row in csvreader:
-            cur = str(row[1])
-            try:
-                data[cur] += float(row[1])
-            except:
-                data[3] += 1
+    try:
+        with open(filename, 'r') as csvfile:
+            csvreader = csv.reader(csvfile)
+            for row in csvreader:
+                cur = str(row[1])
+                try:
+                    data[cur] += float(row[1])
+                except:
+                    data[3] += 1
+    except:
+        return None
                 
     return data
 
 def get_percent_breakdown(breakdown_dict, prints=True):
-    income = breakdown_dict['0']
-    needs = breakdown_dict['2']
-    wants = breakdown_dict['1']
-    savings = breakdown_dict['0'] + needs + wants
+    
+    try:
+        income = breakdown_dict['0']
+        needs = breakdown_dict['2']
+        wants = breakdown_dict['1']
+        savings = breakdown_dict['0'] + needs + wants
+    except:
+        return None
     
    
         

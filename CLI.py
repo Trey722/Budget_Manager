@@ -6,7 +6,7 @@ def user_interaction():
     in or create an account"""
     click.echo("If you want to quit. Hit control C at any time unless speicifed not to")
     user_choice = click.prompt(
-        "Would you like to (1) Sign In or (2) Create an Account? Enter 1 or 2: ",
+        "Would you like to (1) Sign In or (2) Create an Account? Enter 1 or 2",
         type=int,
         default=0,
         show_default=False
