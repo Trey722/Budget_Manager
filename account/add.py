@@ -31,23 +31,29 @@ def confirm_input(input):
     return user_choice
     
     
-    
+# type 0 = income 
+# type 1 = want 
+# type 2 = need    
 def get_type() -> int:
     user_choice = click.prompt(
-        "Would you like to (1) add income (2) add expense Enter 1 or 2: ",
+        "Is this (1) income (2) a want or (3) a need): ",
         type=int,
         default=0,
         show_default=False
     )
     
     if user_choice == 1:
-        return 1
+        return 0
     
     elif user_choice == 2:
-        return 0 
+        return 1
+    
+    elif user_choice == 3:
+        return 2 
+    
     else:
         click.echo("Could not understand")
-        get_type()
+        return get_type()
         
         
 def get_string(request, deafult=None):
@@ -71,7 +77,7 @@ def get_amount(type) -> int:
         show_default=False
     )
     
-    if type == 1:
+    if type == 0:
         if user_choice < 0:
             if (confirm_input(user_choice)) == 0:
                 return user_choice
@@ -81,7 +87,7 @@ def get_amount(type) -> int:
         else:
             return user_choice 
         
-    elif type == 0:
+    elif type == 1 or type == 2:
         if user_choice > 0:
             if (confirm_input(user_choice)) == 0:
                 return user_choice

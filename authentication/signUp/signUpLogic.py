@@ -6,14 +6,17 @@ from keyFunctions import get_csv_location
 
 import account.start as start
 
+global username
 
 def create_account_logic():
+    global username
     username = get_username()
     password = get_password()
     auth.createAccount(username=username, password=password)
     start.welcome(username)
 
 def get_username():
+    global username
     username = click.prompt("Enter Username", type=click.STRING)
     if (check_username(username=username) == False):
         get_username()
