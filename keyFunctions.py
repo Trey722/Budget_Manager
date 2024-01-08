@@ -8,6 +8,17 @@ def get_csv_location(target_name):
     return csv_path
 
 
+def get_budget_csv(user_name):
+    current_directory = os.path.dirname(__file__)
+    csv_path = os.path.join(current_directory, f'data/{user_name}', 'budget.csv')
+    return csv_path  
+
+def get_bugdet_goal_csv(user_name):
+    current_directory = os.path.dirname(__file__)
+    csv_path = os.path.join(current_directory, f'data/{user_name}_budget_breakdown.csv')
+    return csv_path  
+
+
 
 
 def create_csv(location):

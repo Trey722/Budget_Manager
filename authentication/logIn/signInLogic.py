@@ -4,7 +4,7 @@ from authentication import csvManage
 import account.start as start
 import keyFunctions
 
-
+global username
 
 def checkLogIn(username, password):
     usernamesandpassword = csvManage.csv_to_dict(keyFunctions.get_csv_location("auth.csv"))
@@ -18,6 +18,7 @@ def checkLogIn(username, password):
 
 
 def sign_in_logic():
+    global username
     username = click.prompt("Enter username", type=click.STRING)
     password = hash_password(click.prompt("Enter password", type=click.STRING, hide_input=True))
     if checkLogIn(username=username, password=password) == False:
