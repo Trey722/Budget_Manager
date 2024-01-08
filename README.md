@@ -51,14 +51,15 @@ budget manager
   --analytics budget
 ```
 
-- Get a breakdown of your goal 
-  ```bash
-  -- analytics budget goal
-```
 - see how much you need to make/spend to reach your goal
 
 ```bash
 --analytics budget goal - budget
+```
+
+- Get a breakdown of your goal 
+  ```bash
+  -- analytics budget goal
 ```
 
 
